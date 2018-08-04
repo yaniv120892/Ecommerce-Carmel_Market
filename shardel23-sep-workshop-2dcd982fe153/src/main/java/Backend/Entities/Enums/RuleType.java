@@ -1,0 +1,5 @@
+package Backend.Entities.Enums;
+
+public enum RuleType {
+    MAX_AMOUNT, MIN_AMOUNT, ALLOWED_SENDING_ADDRESS, ALLOWED_DISCOUNT_SENDING_ADDRESS
+}

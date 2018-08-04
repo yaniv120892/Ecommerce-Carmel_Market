@@ -1,0 +1,9 @@
+.idea/workspace.xml
+SEP-Workshop.iml
+.idea/misc.xml
+out/
+target/
+.idea/
+Workshop-Web.iml
+# Add any directories, files, or patterns you don't want to be tracked by version control
+MY-SEP.iml

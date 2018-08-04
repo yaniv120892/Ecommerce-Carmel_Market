@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="connection.url">jdbc:postgresql://localhost:5432/CarmelDB?createDatabaseIfNotExist=true</property> <!-- BD Mane -->
+        <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+        <property name="connection.username">postgres</property> <!-- DB User -->
+        <property name="connection.password">password</property> <!-- DB Password -->
+        <property name="connection.pool_size">100</property>
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property> <!-- DB Dialect -->
+        <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+
+        <property name="show_sql">true</property> <!-- Show SQL in console -->
+        <property name="format_sql">true</property> <!-- Show SQL formatted -->
+
+        <!--
+        <mapping resource="Backend/Data/mapping.hbm.xml"/>
+        -->
+
+
+        <mapping class="Backend.Entities.Users.User"/>
+        <mapping class="Backend.Entities.Users.RegUser"/>
+        <mapping class="Backend.Entities.Users.AdminUser"/>
+        <mapping class="Backend.Entities.Store"/>
+        <mapping class="Backend.Entities.Items.Item"/>
+        <mapping class="Backend.Entities.Privileges"/>
+        <mapping class="Backend.Entities.PurchaseHistory"/>
+        <mapping class="Backend.Entities.Items.StoreItem"/>
+        <mapping class="Backend.Entities.Items.SaleItem"/>
+        <mapping class="Backend.Entities.Items.CartItem"/>
+        <mapping class="Backend.Entities.Items.RaffleItem"/>
+        <mapping class="Backend.Entities.Policies.PurchasePolicy"/>
+        <mapping class="Backend.Entities.Cart"/>
+        <mapping class="Backend.Entities.Discount.Discount"/>
+        <mapping class="Backend.Entities.Discount.HiddenDiscount"/>
+        <mapping class="Backend.Entities.Discount.VisibleDiscount"/>
+        <mapping class="Backend.Entities.Discount.Discounts"/>
+        <mapping class="Backend.Entities.Policies.RuleInterface"/>
+        <mapping class="Backend.Entities.Policies.Rule"/>
+        <mapping class="Backend.Entities.Policies.CompositeRule"/>
+        <mapping class="Backend.Entities.Policies.ErrorList"/>
+        <mapping class="WebSocket.Publisher"/>
+        <mapping class="WebSocket.Messages"/>
+
+
+
+    </session-factory>
+</hibernate-configuration>
